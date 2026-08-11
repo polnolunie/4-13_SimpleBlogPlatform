@@ -1,10 +1,9 @@
-function ContactPage() {
-    return (
+function Settings() {
+  return (
     <div>
-      <h1>Contact Page</h1>
-      <p>contacts are here</p>
+      <h1>Settings</h1>
+      <p>Settings are here</p>
     </div>
   );
-    }
-  export default ContactPage;
-  
+}
+export default Settings;

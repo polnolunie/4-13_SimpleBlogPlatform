@@ -2,14 +2,15 @@ import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
 import MainPage from "./MainPage";
 import ArticlePage from "./ArticlePage";
 import ProfilePage from "./ProfilePage";
+import PageButton from "./components/buttons";
 
 function App() {
   return (
     <div className="App">
       <nav>
-        <Link to="/">Main</Link>
-        <Link to="/article">Articles</Link>
-        <Link to="/profile">Profile</Link>
+        <PageButton to="/" label="Main" />
+        <PageButton to="/article" label="Article" />
+        <PageButton to="/profile" label="Profile" />
       </nav>
       <Routes>
         <Route path="/" element={<MainPage />} />
