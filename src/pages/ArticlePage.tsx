@@ -1,5 +1,8 @@
 function ArticlePage() {
-  return <div>Article Page</div>;
+  return ( <div>
+    <h1>Article Page</h1>
+    <p>articles are here</p>
+  </div>
+);
 }
-
 export default ArticlePage;
