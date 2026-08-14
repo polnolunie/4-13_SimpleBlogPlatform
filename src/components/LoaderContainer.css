@@ -1,0 +1,22 @@
+.loader {
+  width: 43px;
+  height: 43px;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.loaderContainer p {
+  width: 98px;
+  height: 49px;
+  opacity: 1;
+  color: #61BB61;
+}

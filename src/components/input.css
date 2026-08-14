@@ -1,0 +1,17 @@
+.mainInput {
+width: 430px;
+height: 35px;
+border-radius: 8px;
+border: solid 1px #AAAAAA;
+opacity: 1;
+padding: 8px 16px;
+}
+
+.mainInput::placeholder {
+    font-size: 16px;
+    color: #333333;
+  }
+
+.mainInput:disabled::placeholder {
+    color: #AAAAAA;
+}
