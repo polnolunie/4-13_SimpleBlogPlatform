@@ -12,3 +12,10 @@
   max-width: 90px;
   margin: 10px;
 }
+
+.imageIcon {
+  width: 16px;
+  height: 16px;
+  border-radius: 16px;
+  padding-right: 5px;
+}
