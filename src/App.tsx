@@ -21,6 +21,7 @@ function App() {
         <Route path="/article" element={<ArticlePage />} />
         <Route path="/profile" element={<ProfilePage />} />
         <Route path="/userinfo" element={<UserInfo />} />
+        <Route path="*" element={<ErrorGlobal />} />
       </Routes>
     </div>
   );

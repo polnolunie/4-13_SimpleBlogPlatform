@@ -2,12 +2,15 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import { BrowserRouter } from "react-router-dom";
 import { Routes, Route } from "react-router-dom";
+import ErrorGlobal from "./error/Error";
 import App from "./App";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
     <BrowserRouter>
-      <App />
+    <ErrorGlobal>
+  <App />
+</ErrorGlobal>
     </BrowserRouter>
   </React.StrictMode>,
 );
