@@ -1,0 +1,10 @@
+.paginationButton {
+width: 41px;
+height: 44px;
+opacity: 1;
+padding: 12px 16px;
+border: solid 1px #61BB61;
+font-weight: 600;
+color: #61BB61;
+background-color: white;
+}

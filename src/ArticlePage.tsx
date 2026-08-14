@@ -1,4 +1,7 @@
-import Input from "./components/input"
+import Input from "./components/input";
+import PaginationBar from "./components/PaginationBar";
+import PaginationButton from "./components/PaginationButton";
+
 
 function ArticlePage() {
   return ( <div>
@@ -6,6 +9,7 @@ function ArticlePage() {
     <p>articles are here</p>
     <Input />
     <Input disabled/>
+    <PaginationBar/>
   </div>
 );
 }
