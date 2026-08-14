@@ -1,4 +1,39 @@
+@font-face {
+  font-family: "Source Sans Pro";
+  src: url(./fonts/SourceSansPro-Regular.ttf) format(truetype);
+  font-weight: 400;
+}
+@font-face {
+  font-family: "Titillium Web";
+  src: url(./fonts/TitilliumWeb-Bold.ttf) format(truetype);
+  font-weight: 600;
+}
+
 body {
   margin: 0;
-  font-family: "Source Sans Pro", sans-serif;
+  font-family: "Source Sans Pro", Arial, Helvetica, sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0%;
+  vertical-align: middle;
+}
+
+h1 {
+  font-family: "Titillium Web", Arial, Helvetica, sans-serif;
+font-weight: 700;
+font-size: 46px;
+line-height: 40px;
+letter-spacing: 0%;
+vertical-align: middle;
+}
+
+h2 {
+font-family: "Titillium Web", Arial, Helvetica, sans-serif;
+font-weight: 600;
+font-size: 32px;
+line-height: 36px;
+letter-spacing: 0%;
+vertical-align: middle;
+
 }

@@ -2,7 +2,9 @@ import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
 import MainPage from "./MainPage";
 import ArticlePage from "./ArticlePage";
 import ProfilePage from "./ProfilePage";
+import WriteArticle from "./pages/WriteArticle";
 import PageButton from "./components/buttons";
+import "./App.css";
 
 function App() {
   return (
