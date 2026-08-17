@@ -1,11 +1,15 @@
 import "./PaginationButton.css";
 
-function PaginationButton ({title}) {
-    return (
-<button className="paginationButton">
-    {title}
+function PaginationButton({ title, onClick, active }) {
+  return (
+    <button
+      type="button"
+      onClick={onClick}
+      className={active ? "paginationButton active" : "paginationButton"}
+    >
+      {title}
     </button>
-    );
+  );
 }
 
 export default PaginationButton;
