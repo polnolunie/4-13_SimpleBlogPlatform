@@ -5,6 +5,7 @@ import ProfilePage from "./ProfilePage";
 import UserInfo from "./components/UserInfo";
 import PageButton from "./components/buttons";
 import ErrorGlobal from "./error/Error";
+import ArticleFromPage from "./pages/ArticleFromPage";
 import "./App.css";
 
 function App() {
@@ -21,6 +22,7 @@ function App() {
         <Route path="/article" element={<ArticlePage />} />
         <Route path="/profile" element={<ProfilePage />} />
         <Route path="/userinfo" element={<UserInfo />} />
+        <Route path="/articles/:slug" element={<ArticleFromPage />} />
         <Route path="*" element={<ErrorGlobal />} />
       </Routes>
     </div>
