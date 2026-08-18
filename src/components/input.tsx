@@ -1,9 +1,12 @@
 import "./input.css";
 
-function Input({disabled, placeholder, type}) {
+function Input({disabled, placeholder, type, register}) {
     return (
-    <input className="mainInput" type={type}
-    placeholder={placeholder} disabled={disabled}
+    <input className="mainInput"
+    type={type}
+    placeholder={placeholder} 
+    disabled={disabled}
+    {...register}
     />
     );
 }
