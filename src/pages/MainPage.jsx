@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import PaginationBar from "../components/PaginationBar";
 import Loader from "../components/LoaderContainer";
 import ErrorGlobal from "../error/Error";
+import DefaultBanner from "../components/Banner/Default";
 
 const API_URL = "https://realworld.habsida.net/api";
 
@@ -50,7 +51,7 @@ function MainPage() {
 
   return (
     <div>
-      <h1>Articles</h1>
+      <DefaultBanner />
 
       {articles.map((article) => (
         <div key={article.slug}>

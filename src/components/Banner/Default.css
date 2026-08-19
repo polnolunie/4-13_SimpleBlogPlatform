@@ -1,0 +1,22 @@
+.default_banner {
+  height: 100px;
+  opacity: 1;
+  padding: 40px 0;
+  color: white;
+  background-color: #61bb61;
+  box-shadow: 0px 0px 24px 0px #00000040 inset;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+}
+
+.default_banner h1 {
+  border-bottom: 1px solid white;
+  margin-bottom: 0;
+}
+
+.default_banner p {
+  margin-top: 0;
+}
