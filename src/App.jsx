@@ -1,25 +1,25 @@
+import { Routes, Route } from "react-router-dom";
+import { useForm } from "react-hook-form";
 import MainPage from "./pages/MainPage";
 import ArticlePage from "./pages/ArticlePage";
-import ProfilePage from "./pages/ProfilePage";
-import UserInfo from "./components/UserInfo";
-import PageButton from "./components/buttons";
 import ErrorGlobal from "./error/Error";
-import "./App.css";
+import Navigation from "./components/NavbarFrame";
+import Signin from "./pages/Signin";
+import Signup from "./pages/Signup";
 
 function App() {
   return (
     <div className="App">
-      <nav>
-        <PageButton to="/" label="Main" />
-        <PageButton to="/article" label="Article" />
-        <PageButton to="/profile" label="Profile" />
-        <PageButton to="/userinfo" label="UserInfo" />
-      </nav>
+      <Navigation />
+
       <Routes>
         <Route path="/" element={<MainPage />} />
-        <Route path="/profile" element={<ProfilePage />} />
-        <Route path="/userinfo" element={<UserInfo />} />
+        <Route path="/articles" element={<MainPage />} />
         <Route path="/articles/:slug" element={<ArticlePage />} />
+
+        <Route path="/signin" element={<Signin />} />
+        <Route path="/signup" element={<Signup />} />
+
         <Route path="*" element={<ErrorGlobal />} />
       </Routes>
     </div>

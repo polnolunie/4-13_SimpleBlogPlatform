@@ -12,9 +12,7 @@ function MainPage() {
   const [articlesCount, setArticlesCount] = useState(0);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(null);
-
   const totalPages = Math.ceil(articlesCount / 10);
-
   useEffect(() => {
     const fetchArticles = async () => {
       try {
@@ -73,4 +71,4 @@ function MainPage() {
   );
 }
 
-export default MAinPage;
+export default MainPage;

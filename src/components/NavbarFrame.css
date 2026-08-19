@@ -1,0 +1,36 @@
+.navigation {
+  width: 100%;
+  background: #ffffff;
+}
+
+.navigation__container {
+  max-width: 1140px;
+  margin: 0 auto;
+  padding: 15px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.navigation__logo {
+  color: #5cb85c;
+  font-size: 24px;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.navigation__links {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.navigation__links a {
+  color: rgba(0, 0, 0, 0.6);
+  text-decoration: none;
+}
+
+.navigation__links a:hover {
+  color: rgba(0, 0, 0, 0.9);
+}
