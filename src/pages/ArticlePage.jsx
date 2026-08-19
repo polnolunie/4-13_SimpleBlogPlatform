@@ -1,8 +1,8 @@
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-import PaginationBar from "./components/PaginationBar";
-import Loader from "./components/LoaderContainer";
-import ErrorGlobal from "./error/Error";
+import PaginationBar from "../components/PaginationBar";
+import Loader from "../components/LoaderContainer";
+import ErrorGlobal from "../error/Error";
 
 const API_URL = "https://realworld.habsida.net/api";
 

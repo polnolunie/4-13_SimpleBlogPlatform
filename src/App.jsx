@@ -1,13 +1,11 @@
 import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
-import MainPage from "./MainPage";
-import ArticlePage from "./ArticlePage";
-import ProfilePage from "./ProfilePage";
+import MainPage from "./pages/MainPage";
+import ArticlePage from "./pages/ArticlePage";
+import ProfilePage from "./pages/ProfilePage";
 import UserInfo from "./components/UserInfo";
 import PageButton from "./components/buttons";
 import ErrorGlobal from "./error/Error";
 import ArticleFromPage from "./pages/ArticleFromPage";
-import Signin from "./pages/Signin";
-import Signup from "./pages/Signup";
 import "./App.css";
 
 function App() {
