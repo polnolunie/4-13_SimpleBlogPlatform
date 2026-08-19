@@ -1,16 +1,16 @@
 import { Routes, Route } from "react-router-dom";
-import { useForm } from "react-hook-form";
 import MainPage from "./pages/MainPage";
 import ArticlePage from "./pages/ArticlePage";
 import ErrorGlobal from "./error/Error";
-import Navigation from "./components/NavbarFrame";
+import NavbarFrame from "./components/NavbarFrame";
 import Signin from "./pages/Signin";
 import Signup from "./pages/Signup";
+import "./App.css";
 
 function App() {
   return (
     <div className="App">
-      <Navigation />
+      <NavbarFrame />
 
       <Routes>
         <Route path="/" element={<MainPage />} />
