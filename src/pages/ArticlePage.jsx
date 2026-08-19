@@ -1,74 +1,31 @@
-import { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
-import PaginationBar from "../components/PaginationBar";
+import { useEffect, useState } from "react";
+import ReactMarkdown from "react-markdown";
+import { useParams } from "react-router-dom";
 import Loader from "../components/LoaderContainer";
-import ErrorGlobal from "../error/Error";
 
 const API_URL = "https://realworld.habsida.net/api";
 
 function ArticlePage() {
-  const [articles, setArticles] = useState([]);
-  const [currentPage, setCurrentPage] = useState(1);
-  const [articlesCount, setArticlesCount] = useState(0);
-  const [loading, setLoading] = useState(false);
-  const [error, setError] = useState(null);
-
-  const totalPages = Math.ceil(articlesCount / 10);
+  const { slug } = useParams();
+  const [article, setArticle] = useState(null);
 
   useEffect(() => {
-    const fetchArticles = async () => {
-      try {
-        setLoading(true);
-        setError(null);
-
-        const response = await fetch(
-          `${API_URL}/articles?limit=10&offset=${(currentPage - 1) * 10}`,
-        );
-
-        if (!response.ok) {
-          throw new Error("Failed to load articles");
-        }
-
-        const data = await response.json();
-        setArticles(data.articles);
-        setArticlesCount(data.articlesCount);
-      } catch (err) {
-        setError(err.message);
-      } finally {
-        setLoading(false);
-      }
+    const fetchArticle = async () => {
+      const response = await fetch(`${API_URL}/articles/${slug}`);
+      const data = await response.json();
+      setArticle(data.article);
     };
 
-    fetchArticles();
-  }, [currentPage]);
+    fetchArticle();
+  }, [slug]);
 
-  if (loading) {
-    return <Loader />;
-  }
-
-  if (error) {
-    return <ErrorGlobal message={error} />;
-  }
+  if (!article) return <Loader />;
 
   return (
     <div>
-      <h1>Articles</h1>
-
-      {articles.map((article) => (
-        <div key={article.slug}>
-          <Link to={`/articles/${article.slug}`}>
-            <h2>{article.title}</h2>
-          </Link>
-          <p>{article.description}</p>
-          <button disabled>Like</button>
-        </div>
-      ))}
-
-      <PaginationBar
-        currentPage={currentPage}
-        totalPages={totalPages}
-        onPageChange={setCurrentPage}
-      />
+      <h1>{article.title}</h1>
+      <ReactMarkdown>{article.description}</ReactMarkdown>
+      <ReactMarkdown>{article.body}</ReactMarkdown>
     </div>
   );
 }
