@@ -1,7 +1,7 @@
 import "./tag.css";
 
-function Tag() {
-  return <div className="tag">tag</div>;
+function Tag({ children }) {
+  return <span className="tag">{children}</span>;
 }
 
 export default Tag;

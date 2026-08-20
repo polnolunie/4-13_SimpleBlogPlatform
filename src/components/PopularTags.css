@@ -1,0 +1,16 @@
+.populartags_container {  margin: 0 auto;
+width: 800px;
+height: 88px;
+border: 1px solid #aaaaaa;
+padding: 16px;
+gap: 12px;
+opacity: 1;
+border-radius: 5px;
+}
+
+.populartags_container h2 {
+font-size: 20px;
+line-height: 24px;
+letter-spacing: 0%;
+vertical-align: middle;
+}

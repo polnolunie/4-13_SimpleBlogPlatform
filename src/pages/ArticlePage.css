@@ -1,0 +1,127 @@
+.article-page {
+    width: 100%;
+    min-height: 100vh;
+  }
+  
+  .article-banner {
+    background-color: #333333;
+    padding: 32px 0;
+    margin-top: 60px;
+  }
+  
+  .article-banner-content {
+    width: 900px;
+    max-width: calc(100% - 40px);
+    margin: 0 auto;
+  }
+  
+  .article_header {
+    margin: 0 0 20px;
+    color: white;
+    font-family: "Titillium Web", Arial, sans-serif;
+    font-size: 46px;
+    line-height: 48px;
+    font-weight: 600;
+  }
+  
+  .article-author {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: white;
+  }
+  
+  .article-author svg {
+    width: 24px;
+    height: 24px;
+    flex-shrink: 0;
+  }
+  
+  .article-author small {
+    display: block;
+    color: #bbbbbb;
+    font-size: 12px;
+    line-height: 16px;
+  }
+  
+  .article-content {
+    width: 900px;
+    max-width: calc(100% - 40px);
+    margin: 20px auto 0;
+    color: #333333;
+  }
+  
+  .article-content p {
+    margin: 0 0 20px;
+    font-size: 16px;
+    line-height: 24px;
+  }
+  
+  .article-tags {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 8px;
+    margin-top: 20px;
+  }
+  
+  .article-actions {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 30px;
+    padding: 20px 0;
+    background-color: white;
+  }
+  
+  .article-user {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-right: auto;
+    color: #61bb61;
+  }
+  
+  .article-user svg {
+    width: 24px;
+    height: 24px;
+    flex-shrink: 0;
+  }
+  
+  .like-button {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    height: 32px;
+    padding: 6px 10px;
+    border: 1px solid #61bb61;
+    border-radius: 5px;
+    background-color: white;
+    color: #61bb61;
+    cursor: pointer;
+  }
+  
+  @media (max-width: 950px) {
+    .article-banner-content,
+    .article-content {
+      width: auto;
+      max-width: calc(100% - 40px);
+    }
+  }
+  
+  @media (max-width: 600px) {
+    .article_header {
+      font-size: 32px;
+      line-height: 36px;
+    }
+  
+    .article-actions {
+      flex-wrap: wrap;
+    }
+  
+    .article-user {
+      width: 100%;
+      margin-right: 0;
+      margin-bottom: 10px;
+    }
+  }
