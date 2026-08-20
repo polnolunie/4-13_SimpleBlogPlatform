@@ -1,10 +1,9 @@
-import { Link } from "react-router-dom";
 import "./buttons.css";
 
-function Button({ children, className }) {
+function Button({ children, label, className }) {
   return (
     <button className={className}>
-      {children}
+      {children || label}
     </button>
   );
 }

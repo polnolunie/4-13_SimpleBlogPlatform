@@ -79,8 +79,8 @@ function ArticlePage() {
     UserName
         
           </span>
-          <Button label="Edit" />
-          <Button label="Delete" />
+      <Button className="like-button" label={"Edit"} />
+          <Button className="delete-button" label={"Delete"} />
         </div>
 
       </div>

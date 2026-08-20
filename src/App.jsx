@@ -1,4 +1,5 @@
 import { Routes, Route } from "react-router-dom";
+import { useLocation } from "react-router-dom";
 import MainPage from "./pages/MainPage";
 import ArticlePage from "./pages/ArticlePage";
 import ErrorGlobal from "./error/Error";

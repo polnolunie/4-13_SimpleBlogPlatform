@@ -10,7 +10,7 @@
   }
   
   .article-banner-content {
-    width: 900px;
+    width: 800px;
     max-width: calc(100% - 40px);
     margin: 0 auto;
   }
@@ -25,8 +25,6 @@
   }
   
   .article-author {
-    display: flex;
-    align-items: center;
     gap: 8px;
     color: white;
   }
@@ -68,17 +66,15 @@
   .article-actions {
     display: flex;
     align-items: center;
+    justify-content: center;
     gap: 10px;
     margin-top: 30px;
-    padding: 20px 0;
-    background-color: white;
   }
   
   .article-user {
     display: flex;
     align-items: center;
     gap: 8px;
-    margin-right: auto;
     color: #61bb61;
   }
   
@@ -91,6 +87,7 @@
   .like-button {
     display: flex;
     align-items: center;
+    justify-content: center;
     gap: 5px;
     height: 32px;
     padding: 6px 10px;
@@ -113,10 +110,6 @@
     .article_header {
       font-size: 32px;
       line-height: 36px;
-    }
-  
-    .article-actions {
-      flex-wrap: wrap;
     }
   
     .article-user {
