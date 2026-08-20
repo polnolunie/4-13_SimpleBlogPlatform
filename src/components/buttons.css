@@ -1,16 +1,17 @@
-.page-button {
+.like-button {
   height: 40px;
   border-radius: 5px;
   padding: 8px 16px;
-  background-color: #61bb61;
-  color: white;
+  background-color: white;
+  color: #61bb61;
   box-sizing: border-box;
   display: flex;
   align-items: center;
-  justify-content: center;
-  max-width: 90px;
+  gap: 8px;
+  border: 1px solid #61bb61;
   margin: 10px;
   text-decoration: none;
+  display: inline-block;
 }
 
 .imageIcon {

@@ -62,7 +62,7 @@ function MainPage() {
             <Link to={`/articles/${article.slug}`}>
               <h2 className="mainPage_article__header">{article.title}</h2>
             </Link>
-            <Button label={"Like"} />
+            <Button label={"12"} />
           </div>
           <p>{article.description}</p>
           <div>
