@@ -1,0 +1,11 @@
+.tag {
+  max-height: 14px;
+  gap: 8px;
+  color: #aaaaaa;
+  padding: 6px 16px;
+  border-radius: 12px;
+  border-width: 1px;
+  border: 2px solid #aaaaaa;
+  display: inline-flex;
+  align-items: center;
+}

@@ -2,6 +2,9 @@ import { useEffect, useState } from "react";
 import ReactMarkdown from "react-markdown";
 import { useParams } from "react-router-dom";
 import Loader from "../components/LoaderContainer";
+import "./ArticlePage.css";
+import Button from "../components/buttons";
+import Tag from "../components/Tag";
 
 const API_URL = "https://realworld.habsida.net/api";
 
@@ -23,9 +26,13 @@ function ArticlePage() {
 
   return (
     <div>
-      <h1>{article.title}</h1>
-      <ReactMarkdown>{article.description}</ReactMarkdown>
-      <ReactMarkdown>{article.body}</ReactMarkdown>
+      <div className="article_container">
+        <h1 className="article_header">{article.title}</h1>
+        <ReactMarkdown>{article.description}</ReactMarkdown>
+        <ReactMarkdown>{article.body}</ReactMarkdown>
+      </div>
+      <Button label={"Like"} />
+      <Tag />
     </div>
   );
 }

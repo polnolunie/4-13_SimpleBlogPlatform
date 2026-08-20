@@ -4,6 +4,9 @@ import PaginationBar from "../components/PaginationBar";
 import Loader from "../components/LoaderContainer";
 import ErrorGlobal from "../error/Error";
 import DefaultBanner from "../components/Banner/Default";
+import Button from "../components/buttons";
+import Tag from "../components/Tag";
+import "./MainPage.css";
 
 const API_URL = "https://realworld.habsida.net/api";
 
@@ -54,12 +57,17 @@ function MainPage() {
       <DefaultBanner />
 
       {articles.map((article) => (
-        <div key={article.slug}>
-          <Link to={`/articles/${article.slug}`}>
-            <h2>{article.title}</h2>
-          </Link>
+        <div className="mainPage_article__container" key={article.slug}>
+          <div className="mainPage_article__top">
+            <Link to={`/articles/${article.slug}`}>
+              <h2 className="mainPage_article__header">{article.title}</h2>
+            </Link>
+            <Button label={"Like"} />
+          </div>
           <p>{article.description}</p>
-          <button disabled>Like</button>
+          <div>
+            <Tag /> <Tag /> <Tag /> <Tag /> <Tag />
+          </div>
         </div>
       ))}
 
