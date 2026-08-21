@@ -61,9 +61,6 @@ function ArticlePage() {
 
       <div className="article-content">
         <ReactMarkdown>
-          {article.description}
-        </ReactMarkdown>
-        <ReactMarkdown>
           {article.body}
         </ReactMarkdown>
         <div className="article-tags">

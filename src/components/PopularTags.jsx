@@ -28,7 +28,7 @@ function PopularTags() {
 
       <div>
   {tags.slice(0, 5).map((tag) => (
-    <Tag key={tag}>{tag}</Tag>
+    <Tag key={tag}>{tag} </Tag>
   ))}
 </div>
     </div>

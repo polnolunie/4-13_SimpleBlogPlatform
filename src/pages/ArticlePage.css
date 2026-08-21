@@ -43,9 +43,9 @@
   }
   
   .article-content {
-    width: 900px;
+    width: 800px;
     max-width: calc(100% - 40px);
-    margin: 20px auto 0;
+    margin: 20px auto;
     color: #333333;
   }
   
@@ -118,3 +118,4 @@
       margin-bottom: 10px;
     }
   }
+ 

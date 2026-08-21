@@ -38,3 +38,21 @@ button.delete-button {
   padding: 6px 12px !important;
   margin: 0 5px !important;
 }
+
+button.favorite-button {
+  padding: 0;
+  margin: 10px;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+ justify-content: center;
+ gap: 12px;
+ width: 112;
+ height: 32;
+ border: 1px solid #61BB61 ;
+ gap: 8px;
+ padding: 6px 16px;
+ color: white;
+ background: #61BB61;
+ border-radius: 8px;
+}
