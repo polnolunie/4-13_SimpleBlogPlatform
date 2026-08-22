@@ -1,4 +1,5 @@
 import { Link, useLocation } from "react-router-dom";
+import Input from "../components/input";
 import "./NavbarFrame.css";
 
 
@@ -6,21 +7,23 @@ function NavbarFrame() {
   const location = useLocation();
 
   const isArticlePage = location.pathname.startsWith("/articles/");
-
+const isLoggedIn = Boolean(localStorage.getItem("token"));
+const user = JSON.parse(localStorage.getItem("user"));
   return (
     <nav className="navigation">
       <div className="navigation_container">
     <h2 className="navigation_header"> Realworld Blog </h2>
-    {isArticlePage ? (
+    {isLoggedIn ? (
       <div className="navigation_links">
         <Link to="/">Home</Link>
   
-        <Link to="/new-article">
+        <Link to= "/newpost">
            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
            <rect x="0.5" y="0.5" width="23" height="23" rx="11.5" stroke="white"/>
            <path d="M17.8125 8.6875L16.5938 9.90625L14.0938 7.40625L15.3125 6.1875C15.4375 6.0625 15.5938 6 15.7812 6C15.9688 6 16.125 6.0625 16.25 6.1875L17.8125 7.75C17.9375 7.875 18 8.03125 18 8.21875C18 8.40625 17.9375 8.5625 17.8125 8.6875ZM6 15.5L13.375 8.125L15.875 10.625L8.5 18H6V15.5Z" fill="#61BB61"/>
            </svg>
-          New Post
+           New Post
+
         </Link>
   
         <Link to="/settings">
@@ -37,7 +40,7 @@ function NavbarFrame() {
 <path d="M8.46875 14.0938C9.69792 13.5938 10.875 13.3438 12 13.3438C13.125 13.3438 14.2917 13.5938 15.5 14.0938C16.7292 14.5729 17.3438 15.2083 17.3438 16V17.3438H6.65625V16C6.65625 15.2083 7.26042 14.5729 8.46875 14.0938ZM13.875 11.2188C13.3542 11.7396 12.7292 12 12 12C11.2708 12 10.6458 11.7396 10.125 11.2188C9.60417 10.6979 9.34375 10.0729 9.34375 9.34375C9.34375 8.61458 9.60417 7.98958 10.125 7.46875C10.6458 6.92708 11.2708 6.65625 12 6.65625C12.7292 6.65625 13.3542 6.92708 13.875 7.46875C14.3958 7.98958 14.6562 8.61458 14.6562 9.34375C14.6562 10.0729 14.3958 10.6979 13.875 11.2188Z" fill="#61BB61"/>
 </svg>
 
-          UserName
+{user?.username}
         </Link>
       </div>
     ) : (

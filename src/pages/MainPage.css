@@ -90,22 +90,3 @@
   object-fit: cover;
 }
 
-.favorite-button {
-  padding: 0;
-  margin: 10px;
-  box-sizing: border-box;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 12px;
-  font-size:14px; 
-  line-height: 1;
-width: 112;
-height: 32;
-border-radius: 1px solid #61BB61 ;
-gap: 8px;
-padding: 6px 16px;
-color: white;
-background: #61BB61;
-border-radius: 8px;
-}
