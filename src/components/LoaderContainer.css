@@ -1,22 +1,32 @@
+.loaderContainer {
+  width: 100%;
+  height: calc(100vh - 60px);
+ margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  box-sizing: border-box;
+}
+
 .loader {
   width: 43px;
   height: 43px;
   animation: spin 1s linear infinite;
 }
 
+.loaderContainer p {
+  margin: 10px 0 0;
+  color: #61bb61;
+  font-size: 16px;
+}
+
 @keyframes spin {
-  0% {
+  from {
     transform: rotate(0deg);
   }
 
-  100% {
+  to {
     transform: rotate(360deg);
   }
-}
-
-.loaderContainer p {
-  width: 98px;
-  height: 49px;
-  opacity: 1;
-  color: #61BB61;
 }
