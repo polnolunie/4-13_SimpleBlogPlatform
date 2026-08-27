@@ -9,6 +9,7 @@ import PopularTags from "../components/PopularTags";
 import Tag from "../components/Tag";
 import Author from "../components/Author";
 import LikeButton from "../components/LikeButton";
+
 import "./MainPage.css";
 
 const API_URL = "https://realworld.habsida.net/api";
@@ -72,7 +73,11 @@ function MainPage() {
               createdAt={article.createdAt}
             />
   
-  <LikeButton count={article.favoritesCount} />
+  <LikeButton
+  slug={article.slug}
+  count={article.favoritesCount}
+  favorited={article.favorited}
+/>
   
           </div>
   

@@ -3,8 +3,8 @@ import "./buttons.css";
 function Button({ children, label, className, type = "button", onClick }) {
   return (
     <button
-      className={className}
       type={type}
+      className={className}
       onClick={onClick}
     >
       {children || label}

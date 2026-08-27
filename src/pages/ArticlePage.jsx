@@ -78,10 +78,11 @@ function ArticlePage() {
           />
           {isAuthor ? (
             <>
-              <Button
-                className="like-button"
-                label="Edit"
-              />
+             <Button
+  className="like-button"
+  label="Edit"
+  onClick={() => navigate(`/articles/${article.slug}/edit`)}
+/>
 
               <Button
                 className="delete-button"

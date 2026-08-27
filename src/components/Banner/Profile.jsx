@@ -6,7 +6,7 @@ import ErrorGlobal from "../error/Error";
 import Author from "../components/Author";
 import LikeButton from "../components/LikeButton";
 import Tag from "../components/Tag";
-import "./ProfilePage.css";
+import "./Profile.css";
 
 const API_URL = "https://realworld.habsida.net/api";
 
