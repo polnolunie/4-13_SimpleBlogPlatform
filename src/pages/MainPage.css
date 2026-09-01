@@ -71,6 +71,7 @@
   align-items: center;
   gap: 8px;
   color: #61bb61;
+  width: fit-content;
 }
 
 .article-author-info {
@@ -84,13 +85,15 @@
 }
 
 .author-avatar {
-  width: 24px !important;
-  height: 24px !important;
-  min-width: 24px;
-  min-height: 24px;
-  max-width: 24px;
-  max-height: 24px;
+  display: block;
+  width: 32px !important;
+  height: 32px !important;
+  min-width: 32px !important;
+  min-height: 32px !important;
+  max-width: 32px !important;
+  max-height: 32px !important;
   border-radius: 50%;
   object-fit: cover;
-  display: block;
+  object-position: center;
+  flex-shrink: 0;
 }
