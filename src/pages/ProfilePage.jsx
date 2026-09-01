@@ -57,14 +57,6 @@ function ProfilePage() {
     return <ErrorGlobal message="You need to sign in" />;
   }
 
-  if (loading) {
-    return <Loader />;
-  }
-
-  if (error) {
-    return <ErrorGlobal message={error} />;
-  }
-
   return (
     <div className="profile-page">
       <div className="profile-banner">
@@ -90,7 +82,11 @@ function ProfilePage() {
           </div>
         </div>
 
-        {articles.length === 0 ? (
+        {loading ? (
+          <Loader />
+        ) : error ? (
+          <ErrorGlobal message={error} />
+        ) : articles.length === 0 ? (
           <p className="profile-empty">
             You haven't published any articles yet.
           </p>
