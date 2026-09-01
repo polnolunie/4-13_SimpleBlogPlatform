@@ -1,10 +1,9 @@
-
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { useForm } from "react-hook-form";
 import { useNavigate, useParams } from "react-router-dom";
 import Input from "../components/input";
 import Button from "../components/buttons";
-import Loader from "../components/LoaderContainer";
+import Tag from "../components/Tag";
 import "./WriteArticle.css";
 
 const API_URL = "https://realworld.habsida.net/api";
@@ -16,6 +15,8 @@ function WriteArticle() {
   const token = localStorage.getItem("token");
   const isEdit = Boolean(slug);
 
+  const [tags, setTags] = useState([]);
+
   const {
     register,
     handleSubmit,
@@ -23,6 +24,21 @@ function WriteArticle() {
     setValue,
     formState: { errors },
   } = useForm();
+
+  useEffect(() => {
+    const fetchTags = async () => {
+      try {
+        const response = await fetch(`${API_URL}/tags`);
+        const data = await response.json();
+
+        setTags(data.tags);
+      } catch (error) {
+        console.error(error);
+      }
+    };
+
+    fetchTags();
+  }, []);
 
   useEffect(() => {
     if (!isEdit) return;
@@ -73,9 +89,6 @@ function WriteArticle() {
       });
 
       const result = await response.json();
-
-      console.log("STATUS:", response.status);
-      console.log("RESULT:", result);
 
       if (!response.ok) {
         if (result.errors) {
@@ -149,9 +162,15 @@ function WriteArticle() {
         </p>
       )}
 
+      <div className="article-popular-tags">
+        {tags.slice(0, 5).map((tag) => (
+          <Tag key={tag}>{tag}</Tag>
+        ))}
+      </div>
+
       <Button
         type="submit"
-        className="publish-button"
+        className="profile-button"
         label={isEdit ? "Update Article" : "Publish Article"}
       />
     </form>

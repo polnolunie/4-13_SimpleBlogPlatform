@@ -1,4 +1,4 @@
-import "./tag.css";
+import "./Tag.css";
 
 function Tag({ children }) {
   return <span className="tag">{children}</span>;

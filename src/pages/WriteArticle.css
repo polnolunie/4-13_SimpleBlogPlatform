@@ -1,0 +1,103 @@
+.write-article-form {
+    width: 400px;
+    margin: 55px auto 0;
+  }
+  
+  .write-article-form h1 {
+    margin: 0 0 20px;
+  
+    text-align: center;
+  
+    font-family: "Titillium Web", Arial, sans-serif;
+    font-size: 32px;
+    line-height: 40px;
+    font-weight: 600;
+  
+    color: #333333;
+  }
+  
+  .write-article-form .mainInput {
+    display: block;
+  
+    width: 100%;
+    height: 40px;
+  
+    margin-bottom: 10px;
+    padding: 10px 12px;
+  
+    box-sizing: border-box;
+  
+    border: 1px solid #cccccc;
+    border-radius: 5px;
+  
+    background-color: white;
+    color: #333333;
+  
+    font-family: "Source Sans Pro", Arial, sans-serif;
+    font-size: 14px;
+  }
+  
+  .write-article-form .mainInput::placeholder {
+    color: #aaaaaa;
+  }
+  
+  /* Большое поле Body */
+  .write-article-form .article-body {
+    display: block;
+  
+    width: 100%;
+    height: 180px;
+  
+    margin-bottom: 10px;
+    padding: 10px 12px;
+  
+    box-sizing: border-box;
+  
+    resize: vertical;
+  
+    border: 1px solid #cccccc;
+    border-radius: 5px;
+  
+    background-color: white;
+    color: #333333;
+  
+    font-family: "Source Sans Pro", Arial, sans-serif;
+    font-size: 14px;
+  }
+  
+  .write-article-form .article-body::placeholder {
+    color: #aaaaaa;
+  }
+  
+  .article-error {
+    margin: -5px 0 8px;
+  
+    color: #e74c3c;
+    font-size: 14px;
+  }
+  
+  .write-article-form .profile-button {
+    display: block;
+  
+    height: 40px;
+  
+    margin: 10px 0 0 auto;
+    padding: 0 16px;
+  
+    border: none;
+    border-radius: 5px;
+  
+    background-color: #61bb61;
+    color: white;
+  
+    font-family: "Source Sans Pro", Arial, sans-serif;
+    font-size: 14px;
+  
+    cursor: pointer;
+  }
+  
+  @media (max-width: 500px) {
+    .write-article-form {
+      width: calc(100% - 40px);
+    }
+  }
