@@ -1,3 +1,5 @@
+import "./Author.css";
+
 function Author({ author, createdAt }) {
     return (
       <div className="article-author">

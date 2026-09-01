@@ -84,16 +84,33 @@
   color: #aaaaaa;
 }
 
-.author-avatar {
-  display: block;
+.article-author .author-avatar {
+  display: block !important;
   width: 32px !important;
   height: 32px !important;
   min-width: 32px !important;
   min-height: 32px !important;
   max-width: 32px !important;
   max-height: 32px !important;
-  border-radius: 50%;
-  object-fit: cover;
-  object-position: center;
-  flex-shrink: 0;
+  border-radius: 50% !important;
+  object-fit: cover !important;
+  object-position: center !important;
+  flex: 0 0 32px !important;
+}
+
+.mainPage_article__top .article-author img,
+.mainPage_article__top img.author-avatar {
+  width: 32px !important;
+  height: 32px !important;
+  min-width: 32px !important;
+  min-height: 32px !important;
+  max-width: 32px !important;
+  max-height: 32px !important;
+
+  display: block !important;
+  border-radius: 50% !important;
+  object-fit: cover !important;
+  object-position: center !important;
+
+  flex: 0 0 32px !important;
 }
