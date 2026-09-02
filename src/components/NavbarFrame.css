@@ -48,3 +48,19 @@
 .navigation_links svg {
   flex-shrink: 0;
 }
+
+.navigation_avatar {
+  width: 28px;
+  height: 28px;
+  min-width: 28px;
+  min-height: 28px;
+  max-width: 28px;
+  max-height: 28px;
+
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: center;
+
+  display: block;
+  flex-shrink: 0;
+}
