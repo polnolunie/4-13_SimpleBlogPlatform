@@ -109,7 +109,7 @@ function ArticlePage() {
           {isAuthor ? (
             <div className="article-owner-buttons">
               <Button
-                className="like-button edit-button"
+                className="edit-button"
                 label="Edit"
                 onClick={() =>
                   navigate(`/articles/${article.slug}/edit`)
